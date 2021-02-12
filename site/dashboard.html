@@ -1,0 +1,538 @@
+<!doctype html>
+  <html lang="fr">
+    <head>
+      <!-- Les balises Méta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="BananesExport : Spécialiste de l'exportation de bananes">
+      <meta name="author" content="">
+      <meta name="generator" content="">
+      <title>BananesExport : Profil</title>
+
+      <!-- Feuilles : Polices -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+      <!-- Feuille Bootstrap -->
+      <link rel="canonical" href="https://index.html">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      <!-- Feuille de CSS -->
+      <link href="css/dashboard.css" rel="stylesheet">
+
+      <!-- Feuille de JS : Perso -->
+      <link href="css/dashboard.js" rel="stylesheet">
+
+      <!-- Bootstrap CSS CDN -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    </head>
+      <body>
+        <main class="wrapper d-flex">
+          <!-- Navigation -->
+          <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse  position-fixed">
+            <div class="position-sticky pt-3">
+              <ul class="nav flex-column">
+                <li class="nav-item" id="bananeslogo">
+                    <img src="img/Logo_BananesExport______-02.png">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" onclick="activetdb()" id="tdb" href="">
+                    Tableau de bord
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="epy" onclick="activepepy()" href="#">
+                    Gérer des employés
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="mtr" onclick="activemtr()" href="#">
+                    Commander du matériel
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pfl" onclick="activepfl()" href="#">
+                    Éditer mon profil
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="myModal()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                    Se déconnecter
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <section class="wrap">
+            <!-- Header -->
+            <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
+              <p class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"> Espace Employé </p>
+              <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                  <a class="nav-link" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Se déconnecter</a>
+                </li>
+              </ul>
+            </header>
+            <div class="container-fluid">
+                <section id="contenubord"> 
+                  <section id="tableaudebord">
+                    <section class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                      <h6 class="h6">Tableau de bord</h6>
+                      <h1 class="h1">Bienvenue Guillaume !</h1>
+                    </section>
+                  </section>
+                    <section class="d-flex tableauborrd">
+                      <div class="card ajoutemploye">
+                        <div class="card-body">
+                          <h5 class="card-title">Gérer des employés</h5>
+                          <p class="card-text">Recruter et planifier l'arrivée des nouveaux arrivants.</p>
+                          <a href="" id="recruter" class="btn btn-primary">Recruter</a>
+                          <a href="" onclick="voir()" id="voir" class="btn btn-primary">Voir les employés ajoutés</a>
+                        </div>
+                      </div>
+                      <div class="card budget">
+                        <div class="card-body">
+                          <div class="card-content d-flex justify-content-between">
+                            <h5 class="card-title">Il vous reste : </h5>
+                            <p class="card-text valeurbudget">1 000 €</p> <!-- Donnée Dynamique -->
+                          </div>
+                          <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="d-flex tableaubord">
+                      <div class="profil card text-center col-md-12">
+                        <div class="card-body ">
+                          <img id="photoprofil" src="img/Guillaume_Turpin.jpg" alt="Guillaume Turpin">
+                          <h4 class="card-title">Guillaume TURPIN</h4>
+                          <p class="card-text">Développeur</p> <!-- Donnée Dynamique -->
+                          <div class="compétences">
+                            <span class="badge bg-secondary">HTML</span> 
+                            <span class="badge bg-secondary">CSS</span> 
+                            <span class="badge bg-secondary">Sass</span> 
+                            <span class="badge bg-secondary">Javascript</span> 
+                            <span class="badge bg-secondary">Node.js</span>
+                          </div>
+                          <a href="#" class="btn btn-primary">Éditer mon profil</a>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- Button trigger modal -->
+                    <!-- Trigger the modal with a button -->
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title"> Bananes Export</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Êtes-vous sûr de vouloir quitter ?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" onclick="window.location.href = 'dashboard.html';" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                      <button type="button" onclick="window.location.href = 'index.html';" class="btn btn-primary" data-dismiss="modal">Quitter</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!----------------------------------------------------------------------------------------- !-->
+            <!---------------------------------  Gérer les employés  -------------------------------------->
+            <!----------------------------------------------------------------------------------------- !-->
+              <!-- Voir la liste des employés ajoutés -->
+                  <section id="gereremployes"> 
+                    <section class="voiremployesajouter dnone" id="voiremployesajouteer"> 
+                      <div class="d-flex justify-content-between">
+                        <div class="bloc-formulaire margin-bottom">
+                          <h6 class="h6">Gérer des employés</h6>
+                          <h1 class="h1">Voir les employés ajoutés</h1>
+                        </div>
+                        <a href="" id="voiremply" class="btn btn-primary">Recruter un nouvel employé</a>
+                      </div>
+                      <hr>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Date d'arrivée</th>
+                            <th scope="col">Poste</th>
+                            <th scope="col">Budget</th>
+                            <th scope="col">Ordinateur</th>
+                            <th scope="col">Télephone</th>
+                            <th scope="col">Casque</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td> <!-- Donnée Dynamique -->
+                            <td>Otto</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>Mark</td> <!-- Donnée Dynamique -->
+                            <td>Otto</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Mark</td> <!-- Donnée Dynamique -->
+                            <td>Otto</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>Mark</td> <!-- Donnée Dynamique -->
+                            <td>Otto</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Mark</td> <!-- Donnée Dynamique -->
+                            <td>Otto</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>Mark</td> <!-- Donnée Dynamique -->
+                            <td>Otto</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                            <td>@mdo</td> <!-- Donnée Dynamique -->
+                          </tr>
+                        </tbody>
+                      </table>
+                    </section>
+                        <!-- Formulaire pour ajouter des employés -->
+                    <section class="formulaireajout" id="ajoutemployer">
+                          <div class="d-flex justify-content-between">
+                            <div class="bloc-formulaire margin-bottom">
+                              <h6 class="h6">Gérer des employés</h6>
+                              <h1 class="h1">Recruter un nouvel employé</h1>
+                            </div>
+                            <a href="" id="voiremply" class="btn btn-primary">Voir les employés ajoutés</a>
+                          </div>
+                          <div class="formcontenu p-0 d-flex container-fluid form g-3">
+                            <form class="row g-3 needs-validation" novalidate>
+                              <!-- Nom, prénom et e-mail -->
+                              <div class="col-md-6 position-relative">
+                                <label for="validationTooltip01" class="form-label">Nom :</label>
+                                <input type="text" class="form-control" id="validationTooltip01" placeholder="Nom" required>
+                                <div class="valid-tooltip">
+                                  C'est bien rempli !
+                                </div>
+                              </div>
+                              <div class="col-md-6 position-relative">
+                                <label for="validationTooltip02" class="form-label">Prénom :</label>
+                                <input type="text" class="form-control" id="validationTooltip02" placeholder="Prénom" required>
+                                <div class="valid-tooltip">
+                                  C'est bien rempli !
+                                </div>
+                              </div>
+                              <div class="col-md-12 pt-3 position-relative">
+                                <label for="exampleFormControlInput1" class="form-label">Adresse e-mail : </label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="prenom@bananesexport.com" required>
+                              </div>
+                              
+                              <!-- Date d'entrée -->
+                              <div class="col-md-12 pt-3 position-relative">
+                                <label for="example-date-input" class="form-label">Date d'arrivée : </label>
+                                <div class="">
+                                  <input class="form-control" type="date" value="2021-01-01" id="example-date-input" required>
+                                </div>
+                              </div>
+                              
+                              <!-- Type de poste -->
+                              <div class="col-md-12 pt-3 position-relative">
+                                <label for="IntitulePoste" class=" form-label">Intitulé du poste : </label>
+                                <select class="form-select col-md-12 pl-2" id="validationTooltip04" required>
+                                  <option selected disabled value="">Selectionner...</option>
+                                  <option>Commercial</option>
+                                  <option>Commerçants</option>
+                                  <option>Développeur</option>
+                                </select>
+                                <div class="invalid-tooltip">
+                                  S'il vous plaît, veuillez sélectionner votre intitulé du poste.
+                                </div>
+                              </div>
+            
+                              <!-- Type d'ordinateur -->
+                              <div class="col-md-12 pt-3 position-relative">
+                                <h5> Sélectionner le type <strong>d'ordinateur </strong> que vous désirez : </h5>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" checked>
+                                  <label class="form-check-label2" for="flexRadioDefault2">
+                                    Fixe
+                                  </label>
+                                </div>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
+                                  <label class="form-check-label1" for="flexRadioDefault1">
+                                    Portable
+                                  </label>
+                                </div>
+                              </div>
+            
+                              <!-- Type de téléphone -->
+                              <div class="col-md-12 pt-3 position-relative">
+                                <h5> Sélectionner le type de <strong> téléphone</strong> que vous désire : </h5>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input2" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" checked>
+                                  <label class="form-check-label2" for="flexRadioDefault2">
+                                    Fixe
+                                  </label>
+                                </div>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input2" type="radio" name="flexRadioDefault2" id="flexRadioDefault1">
+                                  <label class="form-check-label2" for="flexRadioDefault1">
+                                    Smartphone
+                                  </label>
+                                </div>
+                              </div>
+            
+                              <!-- Choix des écrans -->
+                              <div class="col-md-12 pt-3 position-relative">
+                                <h5> Sélectionner le nombre <strong> d'écrans </strong> que vous désirez : </h5>
+                                <select class="selectform col-md-12 position-relative form-select" multiple aria-label="multiple select example">
+                                  <option selected>0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </div>
+            
+                              <!-- Choix des casques-micros -->
+                              <div class="col-md-12 pt-3 position-relative">
+                                <h5> Désirez-vous un <strong> casque micro </strong> ? </h5>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                  <label class="form-check-label" for="flexRadioDefault1">
+                                    Oui
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                  <label class="form-check-label" for="flexRadioDefault2">
+                                    Non
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-12 margin-top form-check">
+                                <button class="btn btn-primary" type="submit">Valider</button>
+                              </div>
+                            </form>
+            
+                          <!-- Indicateur de budget !-->
+                          <div class="card pt-3 dynamiquebudget">
+                            <div class="card ajoutemploye">
+                              <div class="card-body">
+                                <h4 class="card-title">Votre budget est de :</h4>
+                                <p class="card-text valeurbudget">...€</p> <!-- Donnée Dynamique -->
+                                <h5 class="card-title">Tarifs du matériels :</h5>
+                                <ul>
+                                  <li> Ordinateur portable : 1 800€</li> <!-- Donnée Dynamique -->
+                                  <li> Ordinateur fixe et écran : 2 200€</li> <!-- Donnée Dynamique -->
+                                  <li> Écran supplémentaire avec socle de fixation : 250€</li> <!-- Donnée Dynamique -->
+                                  <li> Smartphone : 600€</li> <!-- Donnée Dynamique -->
+                                  <li> Téléphone fixe : 100€</li> <!-- Donnée Dynamique -->
+                                  <li> Micro-casque sans fil : 250 €</li> <!-- Donnée Dynamique -->
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                    </section>
+                  </section>
+            
+            <!----------------------------------------------------------------------------------------- !-->
+            <!------------------------------  Commander le matériel  -------------------------------------->
+            <!----------------------------------------------------------------------------------------- !-->
+                  <section id="commanderlemateriel">
+                    <div class="bloc-formulaire margin-bottom">
+                      <h6 class="h6">Commander du matériel</h6>
+                      <h1 class="h1">Choissisez le matériel que vous désirez</h1>
+                    </div>
+                    
+                    <div class="formcontenu d-flex row form commandeform g-3">
+                      <form class="row g-3 needs-validation2" novalidate>
+                              <!-- Type d'ordinateur -->
+                              <div class="col-md-12 position-relative">
+                                <h5> Modifier le type <strong>d'ordinateur </strong> que vous désirez : </h5>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" checked>
+                                  <label class="form-check-label2" for="flexRadioDefault2">
+                                    Fixe
+                                  </label>
+                                </div>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input1" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
+                                  <label class="form-check-label1" for="flexRadioDefault1">
+                                    Portable
+                                  </label>
+                                </div>
+                              </div>
+            
+                              <!-- Type de téléphone -->
+                              <div class="col-md-12 position-relative">
+                                <h5> Modifier le type de <strong> téléphone</strong> que vous désire : </h5>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input2" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" checked>
+                                  <label class="form-check-label2" for="flexRadioDefault2">
+                                    Fixe
+                                  </label>
+                                </div>
+                                <div class="col-md-12 position-relative">
+                                  <input class="form-check-input2" type="radio" name="flexRadioDefault2" id="flexRadioDefault1">
+                                  <label class="form-check-label2" for="flexRadioDefault1">
+                                    Smartphone
+                                  </label>
+                                </div>
+                              </div>
+            
+                              <!-- Choix des écrans -->
+                              <div class="col-md-12 position-relative">
+                                <h5> Modifier le nombre <strong> d'écrans </strong> que vous désirez : </h5>
+                                <select class="selectform col-md-12 position-relative form-select" multiple aria-label="multiple select example">
+                                  <option selected>0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </div>
+            
+                              <!-- Choix des casques-micros -->
+                              <div class="col-md-12 margin-top position-relative">
+                                <h5> Désirez-vous un <strong> casque micro </strong> ? </h5>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                  <label class="form-check-label" for="flexRadioDefault1">
+                                    Oui
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                  <label class="form-check-label" for="flexRadioDefault2">
+                                    Non
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="orm-check margin-top col-12">
+                                <button class="btn btn-primary" type="submit">Commander</button>
+                              </div>
+                      </form>
+                    
+            
+                    <div class="card dynamiquebudget2">
+                      <div class="card ajoutemploye">
+                        <div class="card-body">
+                          <h4 class="card-title">Vous êtes :</h4>
+                            <p class="card-text valeurposte"> titreposte</p> <!-- Donnée Dynamique -->
+                          <h4 class="card-title">Votre budget est de :</h4>
+                            <p class="card-text valeurbudget">...€</p> <!-- Donnée Dynamique -->
+                          <h4 class="card-title">Votre matériel :</h4>
+                          <ul>
+                            <li> Ordinateur : ...</li> <!-- Donnée Dynamique -->
+                            <li> Téléphone:  ...</li> <!-- Donnée Dynamique -->
+                            <li> Téléphone fixe : ...</li> <!-- Donnée Dynamique -->
+                            <li> Écrans supplémentaire : ...</li> <!-- Donnée Dynamique -->
+                            <li> Micro-casque sans fil : ...</li> <!-- Donnée Dynamique -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </section>
+            
+            <!----------------------------------------------------------------------------------------- !-->
+            <!------------------------------  Éditer le profil  -------------------------------------->
+            <!----------------------------------------------------------------------------------------- !-->
+                  <section id="editerprofil">
+                    <div class="bloc-formulaire margin-bottom">
+                      <h6 class="h6">Éditer mon profil</h6>
+                      <h1 class="h1">Mon profil</h1>
+                    </div>
+            
+                    <div class="formcontenu d-flex row form g-3">
+                      <form class="row g-3 needs-validation3" novalidate>
+                        <!-- Nom, prénom et e-mail -->
+                        <div class="col-md-6 position-relative margin-top">
+                          <label for="validationTooltip01" class="form-label">Nom :</label>
+                          <input type="text" class="form-control" id="validationTooltip01" value="Guillaume" required>
+                          <div class="valid-tooltip">
+                            C'est bien rempli !
+                          </div>
+                        </div>
+                        <div class="col-md-6 position-relative margin-top">
+                          <label for="validationTooltip02" class="form-label">Prénom :</label>
+                          <input type="text" class="form-control" id="validationTooltip02" value="Turpin" required>
+                          <div class="valid-tooltip">
+                            C'est bien rempli !
+                          </div>
+                        </div>
+                        <div class="col-md-12 margin-top">
+                          <label for="exampleFormControlInput1" class="form-label">Adresse e-mail : </label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" value="guillaume.turpin@bananesexport.com" required>
+                        </div>
+                        <!-- Type de poste -->
+                        <div class="col-md-12 position-relative margin-top">
+                          <label for="IntitulePoste" class="form-label">Intitulé du poste : </label>
+                          <select class="form-select col-md-12" id="validationTooltip04" required>
+                            <option value="">Selectionner...</option>
+                            <option>Commercial</option>
+                            <option>Commerçants</option>
+                            <option selected abled >Développeur</option>
+                          </select>
+                          <div class="invalid-tooltip">
+                            S'il vous plaît, veuillez sélectionner votre intitulé du poste.
+                          </div>
+                          <div class="col-md-12 form-label margin-top">
+                            <button class="btn btn-primary" type="submit">Valider</button>
+                          </div>
+                      </form>
+                    </div>
+                      <div class="card dynamiquebudget3">
+                          <div class="card ajoutemploye">
+                            <div class="card-body">
+                              <h4 class="card-title">Votre photo :</h4>
+                              ​<picture>
+                                <source srcset="..." type="image/svg+xml">
+                                <img src="..." class="img-fluid img-thumbnail" alt="...">
+                              </picture><!-- Donnée Dynamique -->
+                              <h4 class="card-title">Votre budget est de :</h4>
+                                <p class="card-text valeurbudget">...€</p> <!-- Donnée Dynamique -->
+                            </div>
+                          </div>
+                      </div>
+                  </section>
+            </div>
+          </section>
+
+        </main>
+      </body>
+
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    
+    <!-- Feuilles Script -->
+    <script src="js/script.js"></script>
+
+
+    </html>

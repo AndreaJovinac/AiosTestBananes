@@ -1,0 +1,344 @@
+/********************************/
+/*********** Général ***********/
+/******************************/
+
+body {
+  font-size: .875rem;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.wrap {
+  width: 100%;
+  display: block;
+  margin-left: 16.75%
+}
+
+.navbar-brand {
+  margin-bottom: 0;
+  
+}
+
+.navbar {
+  box-shadow: none !important;
+  background-color: hsla(85,47%,31%);
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: hsla(85,47%,31%) !important;
+  border-radius: 5em !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #fac100 !important;
+  border-radius: 5em !important;
+  border: none !important;
+}
+
+.btn-secondary {
+  background-color: rgb(198, 198, 198) !important;
+  border-radius: 5em !important;
+  border: none !important;
+}
+
+.btn-secondary:hover {
+  background-color: #000 !important;
+  border-radius: 5em !important;
+  border: none !important;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.mb-3, .my-3, .pb-2, .py-2 {
+  margin-bottom: 0 !important;
+}
+
+h5 {
+  margin-bottom: 0 !important;
+}
+
+/**********************************/
+/************* Sidebar ***********/
+/********************************/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  /*box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);*/
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.nav-item {
+  text-align: center;
+
+}
+
+#bananeslogo {
+  margin-bottom : 80px;
+}
+
+#sidebarMenu {
+  background-color: hsla(85,47%,31%);
+ 
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: hsla(85,47%,31%) !important;
+  font-weight: 800 !important;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/***************************************/
+/************ Navbar ***********/
+/***************************************/
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1.2rem !important;
+  text-transform: capitalize !important;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.nav-item {
+  font-size: 1.1rem;
+}
+
+.bg-dark {
+  background-color: hsla(85,47%,31%) !important;
+}
+.sticky-top {
+  z-index: 1;
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+  background-color: hsla(85,47%,31%);
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+/************************/
+/*** Tableau de bord ***/
+/**********************/
+
+.tableauborrd {
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+#photoprofil {
+  border-radius: 9em;
+  margin-bottom: 1em;
+}
+
+#compétences {
+  margin-bottom: 0.5em;
+}
+
+.badge {
+  margin-bottom: 2em;
+  color: #fff !important;
+  border-radius: 20em;
+}
+
+.card-title {
+  margin-bottom: 0em !important;
+}
+
+.card {
+  background-color: #f8f9fa !important;
+  border: none !important;
+}
+
+.card-content {
+  margin-bottom: 0.8em;
+}
+
+.profil {
+  flex: 10%;
+}
+
+.budget {
+  flex: 50%;
+}
+
+/************************/
+/*** Gérer les employés ***/
+/**********************/
+
+
+.form {
+  flex: 50% !important;
+}
+
+
+.ajoutemploye {
+  flex: 50%;
+}
+
+.needs-validation, .needs-validation2, .needs-validation3 {
+  flex: 60%;
+}
+
+.formcontenu {
+  gap: 1.5em;
+
+}
+
+.dynamiquebudget, .dynamiquebudget2, .dynamiquebudget3{
+  flex: 20%;
+}
+
+.mb-3 {
+  margin-bottom: 0 !important;
+} 
+
+.valeurbudget {
+  font-size: 2em;
+  font-weight: 600;
+  color: hsla(85,47%,31%);
+  margin-bottom: 0 !important;
+}
+
+
+#contenubord {
+  margin-top: 18px;
+}
+
+select {
+  border : 1px solid #ced4da !important;
+  height: 40px;
+  border-radius: .25rem;
+}
+
+.selectform {
+  height: 106px;
+  padding-top: 10px;
+  padding-left: 4px;
+}
+
+.formcontenu {
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+.commandeform {
+  margin-top: 30px;
+}
+
+.form-label {
+  padding: 0 !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+
+/** Affichage des truc **/
+
+#voiremployesajouteer, #ajoutemployer, #commanderlemateriel, #editerprofil {
+  display : none;
+  margin: 30px 0 30px;
+  
+}
+
+#test {
+  z-index: 90000000;
+}
+
+#voiremply {
+  display: inline-table;
+  margin-top: 1em;
+}
+.img-fluid {
+  background-color: grey;
+  border-radius: 10em;
+  height: 60em;
+}
+
+.none {
+  display: none;
+}
+
+.dnone {
+  display: block;
+}
